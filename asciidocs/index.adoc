@@ -15,5 +15,8 @@ ifdef::backend-html5[]
 
 == Datenmodell
 
-test
+[plantuml, cld]
+----
+include::plantuml/teehändler.puml[]
+----
 
