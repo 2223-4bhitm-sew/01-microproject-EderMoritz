@@ -1,10 +1,42 @@
 @startuml
+left to right direction
 
-autonumber
+class Händler {
+    - händlerNr: int
+    - vorname: String
+    - nachname: String
+    - adresse: String
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class Kunde {
+    - kundenNr: int
+    - vorname: String
+    - nachname: String
+    - rechnung: Rechnung[]
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+class Rechnung {
+    - rechnungsNr: int
+    - händlerNr: int
+    - kundenNr: int
+    - positionen: Rechnungsposition[]
+}
+
+class Produkt {
+    - produktNr: int
+    - teesorte: String
+    - preis: double
+}
+
+class Rechnungsposition {
+    - produktNr: int
+    - anzahl: int
+}
+
+Kunde "1" -- "*" Rechnung
+Händler "1" -- "*" Rechnung
+Produkt "1" -- "1" Rechnungsposition
+Rechnung "1" -- "*" Rechnungsposition
+
+
 @enduml
