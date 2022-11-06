@@ -1,6 +1,7 @@
 
 .idea/
-.gh-pages/
+gh-pages/
+.env
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij+all,visualstudiocode,visualstudio,linux,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij+all,visualstudiocode,visualstudio,linux,windows,macos
