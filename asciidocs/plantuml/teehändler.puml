@@ -36,7 +36,7 @@ class Rechnungsposition {
 
 Kunde "1" -- "*" Rechnung
 Händler "1" -- "*" Rechnung
-Produkt "1" -- "1" Rechnungsposition
+Produkt "1" -- "*" Rechnungsposition
 Rechnung "1" -- "*" Rechnungsposition
 
 
