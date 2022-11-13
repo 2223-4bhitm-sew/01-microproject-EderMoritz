@@ -1,43 +1,43 @@
 @startuml
 left to right direction
 
-class Händler {
-    - händlerNr: int
-    - vorname: String
-    - nachname: String
-    - adresse: String
+class Salesman {
+    - salesmanID: int
+    - firstname: String
+    - lastname: String
+    - address: String
 }
 
-class Kunde {
-    - kundenNr: int
-    - vorname: String
-    - nachname: String
-    - rechnung: Rechnung[]
+class Customer {
+    - customerID: int
+    - firstname: String
+    - lastname: String
+    - invoice: Invoice[]
 }
 
-class Rechnung {
-    - rechnungsNr: int
-    - händlerNr: int
-    - kundenNr: int
-    - positionen: Rechnungsposition[]
-    - rechnungsDatum: date
+class Invoice {
+    - invoiceID: int
+    - salesmanID: int
+    - customerID: int
+    - positions: InvoicePosition[]
+    - invoiceDate: date
 }
 
-class Produkt {
-    - produktNr: int
-    - teesorte: String
-    - preis: double
+class Product {
+    - productID: int
+    - teaType: String
+    - price: double
 }
 
-class Rechnungsposition {
-    - produktNr: int
-    - anzahl: int
+class InvoicePosition {
+    - productID: int
+    - quantity: int
 }
 
-Kunde "1" -- "*" Rechnung
-Händler "1" -- "*" Rechnung
-Produkt "1" -- "*" Rechnungsposition
-Rechnung "1" -- "*" Rechnungsposition
+Customer "1" -- "*" Invoice
+Salesman "1" -- "*" Invoice
+Product "1" -- "*" InvoicePosition
+Invoice "1" -- "*" InvoicePosition
 
 
 @enduml
