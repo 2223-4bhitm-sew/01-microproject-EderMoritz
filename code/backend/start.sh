@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-pushd backend
-./start.sh
-popd
+./postgres-stop.sh
+
+./postgres-create-db.sh
+./postgres-start.sh
+./mvnw quarkus:dev clean
+
