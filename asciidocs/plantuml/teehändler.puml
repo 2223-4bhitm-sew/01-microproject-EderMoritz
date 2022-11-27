@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+
+class Salesman {
+    - salesmanID: int
+    - firstname: String
+    - lastname: String
+    - address: String
+}
+
+class Customer {
+    - customerID: int
+    - firstname: String
+    - lastname: String
+    - invoice: Invoice[]
+}
+
+class Invoice {
+    - invoiceID: int
+    - salesmanID: int
+    - customerID: int
+    - positions: InvoicePosition[]
+    - invoiceDate: date
+}
+
+class Product {
+    - productID: int
+    - teaType: String
+    - price: double
+}
+
+class InvoicePosition {
+    - productID: int
+    - quantity: int
+}
+
+Customer "1" -- "*" Invoice
+Salesman "1" -- "*" Invoice
+Product "1" -- "*" InvoicePosition
+Invoice "1" -- "*" InvoicePosition
+
+
+@enduml

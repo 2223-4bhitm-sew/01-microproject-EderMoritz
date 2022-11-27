@@ -1,0 +1,25 @@
+= Übung Mikroprojekt Teehändler
+Thomas Stütz
+1.0.0, {docdate}
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc:
+//:toclevels: 4
+:experimental:
+ifdef::env-github[]
+:tip-caption: 💡
+endif::[]
+
+== Beschreibung
+
+Ein Programm, das den Verkauf/Handel von Tee mittels Datenbank, Entitäten und Tests darstellt.
+
+== User Stories
+
+* Als Salesman will ich wissen, welche Produkte wie oft gekauft werden.
+* Als Customer will ich sehen, welche Artikel ich zu welchem Preis gekauft habe.
+
+== Datenmodell
+
+link:https://2223-4bhitm-sew.github.io/01-microproject-EderMoritz/[]
