@@ -1,1 +1,22 @@
-GET http://localhost:8080
+GET http://localhost:8080/api/product
+
+###
+
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "teaType": "Jasmin",
+  "price": "5"
+}
+
+###
+
+PUT http://localhost:8080/api/product/1/teaType
+Content-Type: text/plain
+
+Kamille
+
+###
+
+DELETE http://localhost:8080/api/product/1
